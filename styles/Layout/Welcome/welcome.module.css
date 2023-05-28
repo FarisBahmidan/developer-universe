@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+.welcome {
+  display: none;
+  overflow: hidden;
+  transition: 1s;
+}
+.welcome .overflow {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
+  z-index: 10;
+}
+.welcome .imgs1 {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.welcome .textWelcome {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.welcome .textWelcome h1 {
+  padding: max(0.4vw, 0.4em) max(0.5vw, 0.5em);
+  background: rgba(184, 172, 247, 0.123);
+  color: rgba(255, 255, 255, 0.623);
+  font-size: max(4vw, 4em);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+}/*# sourceMappingURL=welcome.module.css.map */

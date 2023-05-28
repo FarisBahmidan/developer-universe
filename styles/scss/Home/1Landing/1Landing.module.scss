@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
+
+// Start Landing
+.Landing {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: #180f53;
+
+    &::after {
+        position: absolute;
+        content: "developer universe";
+        right: 3%;
+        bottom: -86%;
+        z-index: 1;
+        font-size: clamp(4.5vw, 20vw, 0.9rem);
+        font-family: "Bruno Ace SC", cursive;
+        height: 100vh;
+
+        @media (max-width: 1164px) {
+            & {
+                bottom: -93%;
+            }
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: -10%;
+        top: 0;
+        width: 200%;
+        height: 100vh;
+        background: linear-gradient(1deg, #000000cb 0%, #130c5cd3 100%);
+        backdrop-filter: blur(5px);
+        z-index: -1;
+    }
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -3;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding: 0 max(2em, 2vw);
+
+        @media (max-width: 1164px) {
+            & {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column-reverse;
+            }
+        }
+
+        .welcom {
+            @media (max-width: 1164px) {
+                & {
+                    width: -moz-available;
+                }
+            }
+            .para {
+                font-size: clamp(2.5vw, 6.5vw, 0.5rem);
+                line-height: 1.2;
+                width: 18em;
+                margin-left: max(2em, 2vw);
+                margin-top: max(1em, 1vw);
+            }
+
+            .about {
+                padding-left: max(3vw, 3em);
+                margin-top: max(3vw, 3em);
+                font-family: "Roboto", sans-serif;
+                color: white;
+                line-height: 1.3;
+                @media (max-width: 1164px) {
+                    & {
+                        padding-left: 0;
+                    }
+                }
+
+                .titel {
+                    position: relative;
+                    font-size: clamp(4vw, 6.5vw, 2rem);
+                    line-height: 1;
+                    width: 10em;
+                    color: white;
+                    padding-bottom: max(0.1em, 0.1vw);
+                    @media (max-width: 566px) {
+                        & {
+                            font-size: clamp(9vw, 6.5vw, 3rem);
+                        }
+                    }
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        left: -12%;
+                        top: -45%;
+                        background-image: url(../../../../public/welcomLogo.svg);
+                        background-repeat: no-repeat;
+                        z-index: -1;
+                        width: max(2em, 6vw);
+                        height: max(2em, 6vw);
+                        background-size: 90%;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        background-image: url(../../../../public/bule.svg);
+                        width: max(1.5em, 5vw);
+                        height: max(1.5em, 5vw);
+                        background-repeat: no-repeat;
+                        background-size: 54%;
+                        top: 55%;
+                        right: -1%;
+                        z-index: -1;
+                    }
+                    .DeveloperLin {
+                        background: linear-gradient(270deg, #f3f7fd -0.01%, #646086 88.98%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                }
+                .totel {
+                    padding-left: max(3.5em, 3.5vw);
+                    
+                    @media (max-width: 566px) {
+                        & {
+                            padding-left: max(2em, 3.5vw);                            
+                            width: 100%;
+                        }
+                    }
+                    .spatiol {
+                        font-weight: bold;
+                        background: linear-gradient(105.41deg, #834de3 7.83%, #a878ff 93.81%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    .text {
+                        position: relative;
+                        font-size: clamp(2vw, 6vw, 1rem);
+                        display: block;
+                        // transition: 0.3s ease;
+                        width: fit-content;
+                        @media (max-width: 604px) {
+                            & {
+                                font-size: clamp(2.4vw, 10vw, .3rem);
+                            }
+                        }
+
+                        @media (max-width: 566px) {
+                            & {
+                                font-size: clamp(5vw, 6vw, 1rem);
+                            }
+                        }
+
+                        &.first_text {
+                            width: 65vw;
+                            // transition: 2s ease;
+                            .colo {
+                                width: 48vw;
+                                // transition: 0.7s ease;
+                            }
+                        }
+                        &.sec_text {
+                            // transition: 2s ease;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0%;
+                                height: 100%;
+                                width: 130%;
+                                background-color: #282c3300;
+                                backdrop-filter: blur(6px);
+                                border-left: 2px solid #ffffff;
+                                animation: anima 5s steps(15) infinite;
+                                @keyframes anima {
+                                    40%,
+                                    60% {
+                                        left: 100%;
+                                    }
+                                    100% {
+                                        left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    h1 {
+                        font-size: clamp(2vw, 6vw, 1rem);
+                        width: fit-content;
+                        position: relative;
+                        top: 15%;
+                        // transition: 1s ease-in-out;
+                    }
+                }
+            }
+
+            .cliks {
+                position: relative;
+                margin-left: max(11em, 11vw);
+                margin-top: max(4em, 4vw);
+                width: fit-content;
+
+                @media (max-width: 1164px) {
+                    & {
+                        margin-left: max(7em, 7vw);
+                    }
+                }
+                @media (max-width: 798px) {
+                    & {
+                        margin-top: max(2em, 2vw);
+                        margin-left: max(6em, 6vw);
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: -17%;
+                    bottom: -0%;
+                    background-image: url(../../../../public/local.svg);
+                    background-repeat: no-repeat;
+                    z-index: -1;
+                    width: max(1em, 6vw);
+                    height: max(1em, 6vw);
+                    background-size: 40%;
+                }
+
+                .join {
+                    background: linear-gradient(105.41deg, #ffffff 7.83%, #cddcf6 93.81%);
+                    color: #834de3;
+                    box-shadow: 0px 10px 20px rgba(179, 197, 234, 0.48), inset -4px -4px 8px #dfe6f5,
+                        inset 3px 3px 10px rgba(255, 255, 255, 0.72);
+                    backdrop-filter: blur(44.275px);
+                    border-radius: 44px;
+                    padding: max(0.1em, 0.1vw) max(0.9em, 0.9vw);
+                    font-size: clamp(2vw, 20vw, 0.9rem);
+                    font-weight: bold;
+                }
+                .chat {
+                    background: rgba(246, 246, 246, 0.37);
+                    color: #ffffff98;
+                    border: 3px solid #ffffff;
+                    backdrop-filter: blur(44.275px);
+                    padding: max(0em, 0vw) max(0.9em, 0.9vw);
+                    font-size: clamp(2vw, 2.5vw, 1rem);
+                    font-weight: bold;
+                    border-radius: 40px;
+                }
+            }
+        }
+        .logo {
+            .servar {
+                position: absolute;
+                top: 50%;
+                right: 2%;
+                transform: translate(-0%, -50%);
+                width: clamp(30vw, 30vw, 8rem);
+                filter: contrast(114%);
+                z-index: -1;
+
+                @media (max-width: 1164px) {
+                    & {
+                        position: relative;
+                        width: clamp(39vw, 30vw, 8rem);
+                        filter: contrast(114%);
+                    }
+                }
+                @media (max-width: 798px) {
+                    & {
+                        width: clamp(60vw, 30vw, 8rem);
+                    }
+                }
+                @media (max-width: 566px) {
+                    & {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// End Landing

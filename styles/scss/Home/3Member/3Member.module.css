@@ -1,0 +1,110 @@
+.Member {
+  background-color: #e9e9ed;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: clamp(4vw, 20vw, 1em);
+}
+.Member .Member_container {
+  display: flex;
+  justify-content: space-between;
+  padding: clamp(3vw, 5vw, 1em) clamp(3vw, 5vw, 0.5em) 0;
+}
+.Member .Member_container .titelMember {
+  line-height: 0.9;
+}
+.Member .Member_container .titelMember h1 {
+  color: #834de3;
+  font-weight: bold;
+  font-size: clamp(7vw, 10vw, 1em);
+  font-family: "Roboto", sans-serif;
+}
+.Member .Member_container .titelMember span {
+  font-size: clamp(1.5vw, 10vw, 0.4em);
+  color: rgba(119, 119, 119, 0.4666666667);
+}
+.Member .Member_container .imageMember .Member3D {
+  width: clamp(40vw, 30vw, 100em);
+}
+.Member .container .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(20vw, 20em), 1fr));
+  justify-items: center;
+  gap: max(3vw, 3em);
+  margin: 0 auto;
+  color: black;
+}
+.Member .container .cards .box {
+  padding: max(1vw, 1em);
+  background: linear-gradient(90.61deg, #ffffff 0.42%, #e9e9ed 99.38%);
+  border-radius: clamp(0.7vw, 10vw, 0.5rem);
+  cursor: cell;
+}
+.Member .container .cards .box .titelMember {
+  display: flex;
+  gap: clamp(1vw, 10vw, 0.5em);
+  margin-bottom: clamp(1vw, 10vw, 0.4em);
+}
+.Member .container .cards .box .titelMember .logoMember .Hunter {
+  height: clamp(4vw, 10vw, 2em);
+  width: clamp(4vw, 10vw, 2em);
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: clamp(50vw, 20vw, 5em);
+}
+.Member .container .cards .box .titelMember .name .Devloper {
+  letter-spacing: -0.005em;
+  background-color: #21ff00;
+  color: #ffffff;
+  border-radius: clamp(30vw, 50vw, 20em);
+  padding: clamp(0.1vw, 1vw, 0.1em) clamp(0.5vw, 1vw, 0.5em);
+  font-weight: bold;
+  text-shadow: 0px 4px 8px rgba(33, 255, 0, 0.14);
+  font-size: clamp(0.9vw, 10vw, 0.1em);
+}
+.Member .container .cards .box .titelMember .name .owner {
+  letter-spacing: -0.005em;
+  background-color: #ca56fa;
+  border-radius: clamp(30vw, 50vw, 20em);
+  padding: clamp(0.1vw, 1vw, 0.1em) clamp(0.5vw, 1vw, 0.5em);
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0px 2px 3px rgba(202, 86, 250, 0.51);
+  font-size: clamp(0.9vw, 10vw, 0.1em);
+}
+.Member .container .cards .box .titelMember .name h1 {
+  color: #000000;
+  font-weight: bold;
+  font-size: clamp(1vw, 6vw, 0.5em);
+}
+.Member .container .cards .box .titelDevloper {
+  color: #21ff00;
+  font-weight: bold;
+  font-size: clamp(0.9vw, 10vw, 0.1em);
+}
+.Member .container .cards .box .titelowner {
+  color: #834de3;
+  font-weight: bold;
+  font-size: clamp(0.9vw, 10vw, 0.1em);
+}
+.Member .container .more {
+  text-align: center;
+  margin: clamp(1vw, 10vw, 0.4em) 0;
+  display: flex;
+  justify-content: center;
+}
+.Member .container .more button {
+  background: linear-gradient(105.41deg, rgba(255, 255, 255, 0.36) 7.83%, rgba(205, 220, 246, 0.36) 93.81%);
+  box-shadow: 0px 10px 20px rgba(179, 197, 234, 0.48), inset -4px -4px 8px #dfe6f5, inset 3px 3px 10px rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: clamp(1vw, 10vw, 0.4em);
+  padding: clamp(0.5vw, 10vw, 0.4em) clamp(1vw, 10vw, 0.4em);
+  color: #000000;
+  font-weight: bold;
+  font-size: clamp(1vw, 10vw, 0.4em);
+  display: flex;
+  gap: clamp(1vw, 10vw, 0.4em);
+}
+.Member .container .more button .faArrowDown {
+  width: clamp(1vw, 10vw, 0.4em);
+}/*# sourceMappingURL=3Member.module.css.map */

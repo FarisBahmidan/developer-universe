@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+.login {
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  display: none;
+  transition: 1s;
+}
+.login .overflow {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  -webkit-backdrop-filter: blur(max(0.5vw, 0.5em));
+          backdrop-filter: blur(max(0.5vw, 0.5em));
+  z-index: 10;
+}
+.login .imgs1 {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: auto;
+  filter: blur(6px);
+}
+.login .concurLog {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+.login .concurLog .container .det {
+  padding: max(0.6vw, 0.5em) max(5vw, 5em);
+  background-color: rgba(78, 56, 118, 0.4039215686);
+  border-radius: 50px;
+  margin: max(5vw, 5em) auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+.login .concurLog .container .det h1 {
+  font-size: max(5vw, 5em);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}
+.login .concurLog .container .det h4 {
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+.login .concurLog .container .logo {
+  margin: max(5vw, 5em) auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+.login .concurLog .container .logo .imgs2 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: max(10vw, 10em);
+  max-height: max(10vw, 10em);
+}
+.login .concurLog .container .logo h2 {
+  margin-top: max(1vw, 1em);
+  color: #ffffff;
+  font-size: max(2vw, 2em);
+}
+.login .concurLog .container .inputconect .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.login .concurLog .container .inputconect .content .contentEyeSlash {
+  position: absolute;
+  left: -4%;
+  padding: max(0.1vw, 0.1em);
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(67, 86, 196, 0.479);
+  -webkit-backdrop-filter: blur(max(0.5vw, 0.5em));
+          backdrop-filter: blur(max(0.5vw, 0.5em));
+  border: 5px solid rgba(204, 204, 204, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  cursor: cell;
+  z-index: 100;
+}
+.login .concurLog .container .inputconect .content .contentEyeSlash .eyeSlash {
+  width: max(2vw, 2em);
+  height: max(2vw, 2em);
+  padding: max(0.2vw, 0.2em);
+  border-radius: max(100vw, 100em);
+  color: white;
+}
+.login .concurLog .container .inputconect .content .passwd {
+  position: relative;
+  width: max(20vw, 20em);
+  height: max(2.8vw, 2.8em);
+  background-color: rgba(185, 172, 247, 0.2117647059);
+  padding: max(0.7vw, 0.7em) max(1vw, 1em) max(0.7vw, 0.7em) max(2vw, 2em);
+  border-radius: max(5vw, 5em);
+  border: none;
+  border-style: none;
+  display: block;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.3s;
+}
+.login .concurLog .container .inputconect .content .passwd::-moz-placeholder {
+  font-weight: 500;
+  color: white;
+  font-size: max(1vw, 1em);
+  -moz-user-select: none;
+       user-select: none;
+  position: absolute;
+  left: 10%;
+  color: rgba(133, 128, 228, 0.685);
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.login .concurLog .container .inputconect .content .passwd::placeholder {
+  font-weight: 500;
+  color: white;
+  font-size: max(1vw, 1em);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: absolute;
+  left: 10%;
+  color: rgba(133, 128, 228, 0.685);
+  transition: 0.3s;
+}
+.login .concurLog .container .inputconect .content .passwd:focus {
+  outline: 1;
+}
+.login .concurLog .container .inputconect .content .passwd:focus::-moz-placeholder {
+  color: transparent;
+}
+.login .concurLog .container .inputconect .content .passwd:focus::placeholder {
+  color: transparent;
+}
+.login .concurLog .container .inputconect .content .contentArrowRight {
+  padding: max(0.3vw, 0.3em);
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: max(100vw, 100em);
+  margin-left: max(1vw, 1em);
+}
+.login .concurLog .container .inputconect .content .contentArrowRight .arrowRight {
+  width: max(2.5vw, 2.5em);
+  height: max(2.5vw, 2.5em);
+  padding: max(0.2vw, 0.2em);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  cursor: pointer;
+  background: #281869;
+  border: 5px solid #776d96;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  transition: 0.3s ease;
+}
+.login .concurLog .container .inputconect .content .contentArrowRight .arrowRight:hover {
+  color: white;
+}/*# sourceMappingURL=login.module.css.map */
