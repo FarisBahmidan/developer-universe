@@ -9,6 +9,12 @@
     z-index: 10;
     background: #180f53;
 
+    @media (max-width: 412px) {
+        & {
+            height: fit-content;
+        }
+    }
+
     &::after {
         position: absolute;
         content: "developer universe";
@@ -22,6 +28,11 @@
         @media (max-width: 1164px) {
             & {
                 bottom: -93%;
+            }
+        }
+        @media (max-width: 412px) {
+            & {
+                display: none;
             }
         }
     }
@@ -65,6 +76,11 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column-reverse;
+            }
+        }
+
+        @media (max-width: 412px) {
+            & {
             }
         }
 
@@ -141,11 +157,16 @@
                 }
                 .totel {
                     padding-left: max(3.5em, 3.5vw);
-                    
+
                     @media (max-width: 566px) {
                         & {
-                            padding-left: max(2em, 3.5vw);                            
+                            padding-left: max(2em, 3.5vw);
                             width: 100%;
+                        }
+                    }
+                    @media (max-width: 412px) {
+                        & {
+                            padding-left: max(1em, 3.5vw);
                         }
                     }
                     .spatiol {
@@ -164,7 +185,7 @@
                         width: fit-content;
                         @media (max-width: 604px) {
                             & {
-                                font-size: clamp(2.4vw, 10vw, .3rem);
+                                font-size: clamp(2.4vw, 10vw, 0.3rem);
                             }
                         }
 
@@ -235,6 +256,11 @@
                         margin-left: max(6em, 6vw);
                     }
                 }
+                @media (max-width: 412px) {
+                    & {
+                        margin-left: max(4em, 4vw);
+                    }
+                }
 
                 &::before {
                     position: absolute;
@@ -247,6 +273,22 @@
                     width: max(1em, 6vw);
                     height: max(1em, 6vw);
                     background-size: 40%;
+                    @media (max-width: 412px) {
+                        & {
+                            left: -17%;
+                            width: max(4em, 6vw);
+                            height: max(4em, 6vw);
+                        }
+                    }
+
+                    @media (max-width: 384px) {
+                        &{
+                            left: -17%;
+                            width: max(3em, 6vw);
+                            height: max(3em, 6vw);
+                        }
+                    }
+    
                 }
 
                 .join {
@@ -270,6 +312,19 @@
                     font-weight: bold;
                     border-radius: 40px;
                 }
+                @media (max-width: 412px) {
+                    .join,
+                    .chat {
+                        font-size: clamp(5vw, 20vw, 0.9rem);
+                    }
+                }
+                @media (max-width: 384px) {
+                    .join,
+                    .chat {
+                        font-size: clamp(4vw, 20vw, 0.9rem);
+                    }
+                }
+
             }
         }
         .logo {
@@ -277,7 +332,7 @@
                 position: absolute;
                 top: 50%;
                 right: 2%;
-                transform: translate(-0%, -50%);
+                transform: translate(0%, -50%);
                 width: clamp(30vw, 30vw, 8rem);
                 filter: contrast(114%);
                 z-index: -1;
@@ -294,9 +349,9 @@
                         width: clamp(60vw, 30vw, 8rem);
                     }
                 }
-                @media (max-width: 566px) {
+                @media (max-width: 412حء) {
                     & {
-                        display: none;
+                        height: 70vh;
                     }
                 }
             }

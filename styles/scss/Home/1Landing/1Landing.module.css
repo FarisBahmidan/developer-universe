@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
 .Landing {
   position: relative;
@@ -6,6 +7,12 @@
   height: 100vh;
   z-index: 10;
   background: #180f53;
+}
+@media (max-width: 412px) {
+  .Landing {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 .Landing::after {
   position: absolute;
@@ -20,6 +27,11 @@
 @media (max-width: 1164px) {
   .Landing::after {
     bottom: -93%;
+  }
+}
+@media (max-width: 412px) {
+  .Landing::after {
+    display: none;
   }
 }
 .Landing::before {
@@ -141,6 +153,11 @@
     width: 100%;
   }
 }
+@media (max-width: 412px) {
+  .Landing .container .welcom .about .totel {
+    padding-left: max(1em, 3.5vw);
+  }
+}
 .Landing .container .welcom .about .totel .spatiol {
   font-weight: bold;
   background: linear-gradient(105.41deg, #834de3 7.83%, #a878ff 93.81%);
@@ -218,6 +235,11 @@
     margin-left: max(6em, 6vw);
   }
 }
+@media (max-width: 412px) {
+  .Landing .container .welcom .cliks {
+    margin-left: max(4em, 4vw);
+  }
+}
 .Landing .container .welcom .cliks::before {
   position: absolute;
   content: "";
@@ -229,6 +251,20 @@
   width: max(1em, 6vw);
   height: max(1em, 6vw);
   background-size: 40%;
+}
+@media (max-width: 412px) {
+  .Landing .container .welcom .cliks::before {
+    left: -17%;
+    width: max(4em, 6vw);
+    height: max(4em, 6vw);
+  }
+}
+@media (max-width: 384px) {
+  .Landing .container .welcom .cliks::before {
+    left: -17%;
+    width: max(3em, 6vw);
+    height: max(3em, 6vw);
+  }
 }
 .Landing .container .welcom .cliks .join {
   background: linear-gradient(105.41deg, #ffffff 7.83%, #cddcf6 93.81%);
@@ -252,6 +288,18 @@
   font-weight: bold;
   border-radius: 40px;
 }
+@media (max-width: 412px) {
+  .Landing .container .welcom .cliks .join,
+  .Landing .container .welcom .cliks .chat {
+    font-size: clamp(5vw, 20vw, 0.9rem);
+  }
+}
+@media (max-width: 384px) {
+  .Landing .container .welcom .cliks .join,
+  .Landing .container .welcom .cliks .chat {
+    font-size: clamp(4vw, 20vw, 0.9rem);
+  }
+}
 .Landing .container .logo .servar {
   position: absolute;
   top: 50%;
@@ -273,8 +321,8 @@
     width: clamp(60vw, 30vw, 8rem);
   }
 }
-@media (max-width: 566px) {
+@media (max-width: 412حء) {
   .Landing .container .logo .servar {
-    display: none;
+    height: 70vh;
   }
 }/*# sourceMappingURL=1Landing.module.css.map */

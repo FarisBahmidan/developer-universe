@@ -44,9 +44,9 @@
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(max(20vw, 20em), 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(clamp(20vw, 20vw, 20em), 1fr));
             justify-items: center;
-            gap: max(3vw, 3em);
+            gap: clamp(5vw, 20vw, 2em);
             margin: 0 auto;
             color: black;
             .box {
@@ -59,10 +59,10 @@
                 box-shadow: 0px 10px 20px rgba(179, 197, 234, 0.48), inset -4px -4px 8px #dfe6f5,
                     inset 3px 3px 10px rgba(255, 255, 255, 0.72);
                 z-index: 1;
-                padding: max(1vw, 1em) max(0vw, 0em) max(0vw, 0em) max(0vw, 0em);
-                border-radius: max(2vw, 2em);
-                margin: max(2vw, 2em) max(0vw, 0em) max(1vw, 1em);
-                width: max(19vw, 19em);
+                padding-top: clamp(1vw, 20vw, 0.4em);
+                border-radius: clamp(2vw, 9vw, 0.4em);
+                margin: clamp(2vw, 20vw, 0.9em) clamp(0vw, 0vw, 0em) clamp(1vw, 20vw, 0.4em);
+                width: clamp(24vw, 20vw, 14em);
                 height: -moz-fit-content;
                 height: fit-content;
                 overflow: hidden;
@@ -73,7 +73,7 @@
                 //     margin-top: max(7vw, 7em);
                 // }
                 .projectimges {
-                    width: max(20vw, 20em);
+                    width: 100%;
                     height: -moz-fit-content;
                     height: fit-content;
                     position: absolute;
@@ -86,9 +86,9 @@
                     position: relative;
                     background: linear-gradient(105.41deg, rgb(246, 248, 255) 7.83%, rgb(205, 220, 246) 93.81%);
                     box-shadow: 0px 10px 20px rgba(179, 197, 234, 0.48);
-                    margin-top: max(4vw, 4em);
-                    padding-bottom: clamp(0.8vw, 40vw, 0.2em);
-                    border-radius: max(2vw, 2em) max(2vw, 2em) max(0vw, 0em) max(2vw, 2em);
+                    margin-top: clamp(5vw, 20vw, .6em);
+                    padding-bottom: clamp(0.8vw, 5vw, 0.2em);
+                    border-radius: clamp(2vw, 9vw, 0.4em);
                     z-index: 1;
                     transition: 0.3s ease;
 
@@ -109,7 +109,7 @@
                             background-color: transparent;
                             font-family: "Work Sans", sans-serif;
                             font-weight: 600;
-                            font-size: clamp(2vw, 4vw, 0.2em);
+                            font-size: clamp(2vw, 10vw, 0.8em);
                         }
                         p {
                             font-family: "Roboto", sans-serif;
@@ -141,7 +141,7 @@
                                 box-shadow: 0px 10px 20px rgba(179, 197, 234, 0.48), inset -4px -4px 8px #dfe6f5,
                                     inset 3px 3px 10px rgba(255, 255, 255, 0.72);
                                 border-radius: clamp(0.6vw, 5vw, 0.1em);
-                                padding: clamp(0.4vw, 5vw, 0.4em) clamp(1vw, 5vw, 0.4em);
+                                padding: clamp(0.4vw, 10vw, 0.2em) clamp(1vw, 5vw, 0.4em);
                                 transition: 0.3s ease;
                                 &:hover {
                                     box-shadow: 0px 10px 20px rgba(179, 197, 234, 0), inset -4px -4px 8px #dfe6f5,
