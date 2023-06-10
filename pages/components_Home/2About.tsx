@@ -30,7 +30,6 @@ export default function About() {
             <div className={`${styles.About} bg-black h-[100vh] w-full`}>
                 <div className={styles.titel}>
                     <h1>About<span> Developer universe</span></h1>
-                    <h1>About<span> Developer universe</span></h1>
                 </div>
                 <div className={styles.contint_about}>
                     <div className={styles.cards}>
