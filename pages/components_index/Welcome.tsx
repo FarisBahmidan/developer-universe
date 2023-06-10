@@ -62,7 +62,7 @@ export default function Welcome() {
 
 
         const hiAnimation = async () => {
-            await sleep(5000)
+            await sleep(2000)
             await useYofiAnimation(WelcomeStyle, setWelcomeStyle, goAnimationWelcome)
             await useYofiAnimation(LoginStyle, setLoginStyle, comeAnimationWelcome)
         }

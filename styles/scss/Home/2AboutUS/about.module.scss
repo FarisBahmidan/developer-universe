@@ -7,7 +7,7 @@
     height: fit-content;
     z-index: 10;
     background: #000000;
-    padding: max(5em, 5vw) 0 max(.1em, .1vw);
+    padding: max(5em, 5vw) 0 max(0.1em, 0.1vw);
     overflow: hidden;
 
     &::after {
@@ -15,9 +15,9 @@
         content: "";
         bottom: -1%;
         left: -10%;
-        width: clamp(150vw,30vw, 100em);
+        width: clamp(150vw, 30vw, 100em);
         height: 5vh;
-        background: linear-gradient(142.85deg, rgba(233, 233, 237, 0.67) -414.97%, #E9E9ED -154.18%);
+        background: linear-gradient(142.85deg, rgba(233, 233, 237, 0.67) -414.97%, #e9e9ed -154.18%);
         filter: blur(5px);
         z-index: 200;
     }
@@ -35,7 +35,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-fill-color: transparent;
+            text-emphasis-color: transparent;
         }
     }
 
@@ -99,7 +99,7 @@
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         background-clip: text;
-                        text-fill-color: transparent;
+                        text-emphasis-color: transparent;
                     }
                     h4 {
                         margin-bottom: max(1em, 1vw);
@@ -163,24 +163,31 @@
             z-index: -1;
         }
 
-
         .row1 {
-            width: clamp(26vw, 30vw, 10em);
-            height: fit-content;
+            // width: clamp(26vw, 30vw, 10em);
+            // height: fit-content;
             .card {
                 background-color: #000000;
-                padding: clamp(1vw, 10vw, 0.2em);
-                border-radius: clamp(1vw, 10vw, 0.2em);
+                // padding: clamp(1vw, 10vw, 0.2em);
+                // border-radius: clamp(1vw, 10vw, 0.2em);
+                border-radius: max(1em, 1vw);
+                padding: max(1em, 1vw);
+                width: max(28em, 28vw);
                 .questions {
                     h1 {
                         color: white;
-                        font-size: clamp(2vw, 10vw, .1em);
+                        font-size: clamp(2vw, 10vw, 0.1em);
+                        span {
+                            display: block;
+                        }
                     }
                 }
                 .questionsIcon {
                     text-align: -moz-right;
+                    text-align: end;
+
                     .Iconse {
-                        width: clamp(2vw, 5vw, 0.3em);
+                        font-size: max(2em, 2vw);
                         margin: clamp(1vw, 10vw, 0.5em) 0;
                     }
                 }
@@ -210,7 +217,7 @@
                                 -webkit-background-clip: text;
                                 -webkit-text-fill-color: transparent;
                                 background-clip: text;
-                                text-fill-color: transparent;
+                                text-emphasis-color: transparent;
                                 font-size: clamp(2vw, 5vw, 0.3em);
                             }
                         }
@@ -220,13 +227,11 @@
 
             .name {
                 position: relative;
-                right: -20%;
+                margin: max(1em, 1vw) 0 0 auto;
                 background-color: #000000;
-                margin-top: max(1em, 1vw);
                 padding: max(0.7em, 0.7vw) max(1em, 1vw) max(0.7em, 0.7vw) max(1em, 1vw);
-                border-radius: clamp(1vw, 10vw, 0.2em);
-                width: fit-content;
-
+                border-radius: max(1em, 1vw);
+                width: max(24em, 23vw);
                 @media (max-width: 1745px) {
                     & {
                         right: 0%;
@@ -251,7 +256,7 @@
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
                             background-clip: text;
-                            text-fill-color: transparent;
+                            text-emphasis-color: transparent;
                             font-size: clamp(1.7vw, 10vw, 0.4em);
                             font-weight: bold;
                         }
@@ -259,19 +264,25 @@
                     .faArrowsTurnToDots {
                         width: clamp(2vw, 30vw, 0.5em);
                         margin-left: clamp(1vw, 5vw, 0.3em);
+                        text-align: -moz-right;
+                        text-align: end;
+                        font-size: max(2em, 2vw);
                     }
                 }
             }
         }
         .row2 {
-            width: fit-content;
-            height: fit-content;
+            // width: fit-content;
+            // height: fit-content;
             .mobily {
                 background-color: #000000;
-                padding: clamp(0.8vw, 5vw, 0.2em);
-                padding-top: clamp(0.3vw, 5vw, 0.1em);
-                border-radius: clamp(1vw, 5vw, 0.2em);
-                width: clamp(25vw, 30vw, 10em);
+                // padding: clamp(0.8vw, 5vw, 0.2em);
+                // padding-top: clamp(0.3vw, 5vw, 0.1em);
+                // border-radius: clamp(1vw, 5vw, 0.2em);
+                // width: clamp(25vw, 30vw, 10em);
+                width: max(25em, 25vw);
+                border-radius: max(1em, 1vw);
+                padding: max(1em, 1vw);
 
                 .head {
                     display: flex;
@@ -309,7 +320,7 @@
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         background-clip: text;
-                        text-fill-color: transparent;
+                        text-emphasis-color: transparent;
                     }
                     button {
                         background-color: #191919;
@@ -356,25 +367,28 @@
                             padding: clamp(0.6vw, 5vw, 0.2em);
                             padding-top: clamp(0.1vw, 5vw, 0.2em);
                             padding-bottom: clamp(0.1vw, 5vw, 0.2em);
-
-                            .Iconse {
-                                width: 6%;
-                                color: #777;
+                            .Iconse1 {
+                                color: #ffffff;
+                                font-size: max(1.5em,1.5vw);
                             }
+                            
                         }
                     }
                 }
             }
         }
         .row3 {
-            width: fit-content;
-            height: fit-content;
+            // width: fit-content;
+            // height: fit-content;
             //
             .cardQA {
                 background-color: #000000;
-                padding: clamp(1vw, 5vw, 0.2em);
-                border-radius: clamp(1vw, 5vw, 0.2em);
-                width: fit-content;
+                // padding: clamp(1vw, 5vw, 0.2em);
+                // border-radius: clamp(1vw, 5vw, 0.2em);
+                border-radius: max(1em, 1vw);
+                padding: max(1em, 1vw);
+                width: max(38em, 38vw);
+
                 .QA {
                     h1 {
                         color: white;
@@ -384,9 +398,10 @@
                 }
                 .questionsIcon {
                     text-align: -moz-right;
+                    text-align: end;
                     margin: clamp(1vw, 10vw, 0.5em) 0;
                     .Iconse {
-                        width: clamp(3vw, 10vw, 0.4em);
+                        font-size: max(2em, 2vw);
                     }
                 }
 
@@ -411,6 +426,7 @@
                             h1 {
                                 color: white;
                                 font-size: clamp(1vw, 5vw, 0.3em);
+                           
                             }
                             .chevron {
                                 width: 3%;
@@ -422,22 +438,28 @@
 
             .ticket {
                 background-color: #000000;
-                margin-top: clamp(1.9vw, 10vw, 0.2em);
-                padding: clamp(0.7vw, 10vw, 0.1em) clamp(1vw, 10vw, 0.2em);
-                border-radius: clamp(1vw, 10vw, 0.2em);
-                width: fit-content;
+                // margin-top: clamp(1.9vw, 10vw, 0.2em);
+                // padding: clamp(0.7vw, 10vw, 0.1em) clamp(1vw, 10vw, 0.2em);
+                // border-radius: clamp(1vw, 10vw, 0.2em);
+                margin-top: max(1em, 1vw);
+                border-radius: max(1em, 1vw);
+                padding: max(1em, 1vw);
+                width: max(25em, 25vw);
+                height: 100%;
+
                 .devloper {
                     background-color: #ffffff;
                     padding: clamp(0.7vw, 10vw, 0.1em) clamp(4vw, 10vw, 0.5em);
                     border-radius: clamp(0.4vw, 10vw, 0.1em);
                     text-align: center;
+                    height: 100%;
 
                     h1 {
                         background: linear-gradient(270deg, #834de3 -0.01%, #ca56fa 88.98%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         background-clip: text;
-                        text-fill-color: transparent;
+                        text-emphasis-color: transparent;
                         font-size: clamp(2vw, 10vw, 0.5em);
                         font-weight: bold;
                         margin-bottom: clamp(1vw, 10vw, 0.4em);

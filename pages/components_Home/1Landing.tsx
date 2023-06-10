@@ -36,7 +36,6 @@ export default function Landing() {
                         </div>
                         <div className={`${styles.cliks} flex gap-7`}>
                             <button className={styles.join}>JOIN</button>
-                            <h1>sdsf</h1>
                             <button className={styles.chat}>join the chat</button>
                         </div>
                     </div>

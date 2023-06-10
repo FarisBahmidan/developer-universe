@@ -4,8 +4,7 @@ import MainLayout from '@/components/MainLayout'
 import Link from 'next/link'
 import Landing from './components_Home/1Landing'
 import About from './components_Home/2About'
-import Member from './components_Home/3Member'
-import Project from './components_Home/4Project'
+import SectionProp from './components_Home/Allsection/SectionProp'
 
 // import Pages
 
@@ -29,8 +28,7 @@ export default function Home() {
                 <>
                     <Landing />
                     <About />
-                    <Member />
-                    <Project />
+                    <SectionProp />
                 </>
             </MainLayout>
         </>

@@ -1,0 +1,166 @@
+.sectionProp {
+  position: relative;
+  background-color: #e9e9ed;
+}
+.sectionProp .rorororooo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.sectionProp .contint {
+  position: relative;
+  z-index: 100;
+}
+.sectionProp .contint .titelMember {
+  padding: clamp(4vw, 20vw, 1em);
+  padding-bottom: clamp(2vw, 20vw, 1em);
+  line-height: 0.9;
+}
+.sectionProp .contint .titelMember h1 {
+  color: #834de3;
+  font-weight: bold;
+  font-size: clamp(7vw, 10vw, 1em);
+  font-family: "Roboto", sans-serif;
+}
+.sectionProp .contint .titelMember span {
+  font-size: clamp(1.5vw, 10vw, 0.4em);
+  color: rgba(119, 119, 119, 0.4666666667);
+}
+.sectionProp .contint .listInput {
+  margin-right: max(4em, 4vw);
+}
+.sectionProp .contint .listInput .list {
+  margin-bottom: clamp(1vw, 20vw, 1em);
+  background: linear-gradient(-10deg, rgb(233, 233, 237) 7.83%, rgba(205, 220, 246, 0.77) 93.81%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 clamp(0.6vw, 20vw, 0.5em) clamp(0.6vw, 20vw, 0.5em) 0;
+  padding: clamp(0.5vw, 20vw, 0.3em) clamp(2vw, 20vw, 1em);
+}
+.sectionProp .contint .listInput .list .contintlist {
+  display: flex;
+  flex-direction: row;
+  gap: max(1em, 1vw);
+}
+.sectionProp .contint .listInput .list .contintlist .list_item {
+  background: #ffffff;
+  border-radius: max(0.2em, 0.2vw);
+}
+.sectionProp .contint .listInput .list .contintlist .list_item button {
+  padding: 0 max(0.8em, 0.8vw);
+  font-size: max(1.4em, 1.4vw);
+  font-weight: bold;
+  background: linear-gradient(270deg, #834de3 -0.01%, #ca56fa 88.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-emphasis-color: transparent;
+          text-emphasis-color: transparent;
+}
+.sectionProp .contint .listInput .inputconect .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sectionProp .contint .listInput .inputconect .content .contentSearch {
+  position: relative;
+  z-index: 100;
+}
+.sectionProp .contint .listInput .inputconect .content .contentSearch select {
+  position: absolute;
+  border-radius: max(2em, 2vw);
+  width: max(6em, 6vw);
+  color: black;
+  padding: max(0.2em, 0.2vw);
+  margin-left: max(0.7em, 0.7vw);
+  background: #dfe6f5;
+  box-shadow: 0px 10px 20px rgba(179, 197, 234, 0.48), inset -4px -4px 8px #dfe6f5, inset 3px 3px 10px rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(44.275px);
+          backdrop-filter: blur(44.275px);
+  border-radius: 24px;
+  top: 0;
+  left: 0;
+  transform: translate(0%, -50%);
+}
+.sectionProp .contint .listInput .inputconect .content .search {
+  position: relative;
+  width: max(28em, 28vw);
+  height: max(2.8em, 2.8vw);
+  padding: max(0.7em, 0.7vw) max(1em, 1vw) max(0.7em, 0.7vw) max(7.3em, 7.3vw);
+  border-radius: max(3em, 3vw);
+  border: none;
+  border-style: none;
+  color: #000000;
+  transition: 0.3s;
+  background: rgba(224, 202, 235, 0.2117647059);
+  box-shadow: 0px 10px 20px rgba(179, 197, 234, 0.48), inset -4px -4px 8px #dfe6f5, inset 3px 3px 10px rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+  border-radius: 37px;
+}
+.sectionProp .contint .listInput .inputconect .content .search::-moz-placeholder {
+  position: absolute;
+  font-size: max(1vw, 1em);
+  font-weight: 500;
+  -moz-user-select: none;
+       user-select: none;
+  left: 33%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(133, 128, 228, 0.685);
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.sectionProp .contint .listInput .inputconect .content .search::placeholder {
+  position: absolute;
+  font-size: max(1vw, 1em);
+  font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  left: 33%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(133, 128, 228, 0.685);
+  transition: 0.3s;
+}
+.sectionProp .contint .listInput .inputconect .content .search:focus {
+  outline: 0;
+}
+.sectionProp .contint .listInput .inputconect .content .search:focus::-moz-placeholder {
+  padding-right: max(3em, 3vw);
+  left: 38%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+}
+.sectionProp .contint .listInput .inputconect .content .search:focus::placeholder {
+  padding-right: max(3em, 3vw);
+  left: 38%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+}
+.sectionProp .contint .listInput .inputconect .content .contentArrowRight {
+  position: relative;
+  padding: max(0.3vw, 0.3em);
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: max(100vw, 100em);
+  margin-left: max(1vw, 1em);
+}
+.sectionProp .contint .listInput .inputconect .content .contentArrowRight .searchIcon {
+  padding: max(0.2vw, 0.2em);
+  border-radius: 100px;
+  transition: 0.3s ease;
+  color: #be9ce8;
+  font-size: max(1.8em, 1.8vw);
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translate(-60%, -50%);
+}/*# sourceMappingURL=sectionProp.module.css.map */

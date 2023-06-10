@@ -63,6 +63,8 @@
   position: relative;
   margin-top: max(10vw, 10em);
   bottom: 0;
+  position: relative;
+  z-index: 100;
 }
 .Footer .communication {
   position: absolute;

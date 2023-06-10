@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from '../../styles/Layout/Login/login.module.css'
+import Link from 'next/link'
 
 
 
@@ -13,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faArrowRight,
     faEyeSlash,
-    
+
 } from "@fortawesome/free-solid-svg-icons";
 // import the icons you need
 
@@ -77,7 +78,7 @@ export default function Login() {
 
 
         const hiAnimation = async () => {
-            await sleep(5000)
+            await sleep(2000)
             await useYofiAnimation(WelcomeStyle, setWelcomeStyle, goAnimationWelcome)
             await useYofiAnimation(LoginStyle, setLoginStyle, comeAnimationWelcome)
         }
@@ -108,9 +109,10 @@ export default function Login() {
                                     <FontAwesomeIcon className={styles.eyeSlash} icon={faEyeSlash} style={{ zIndex: '100', }} />
                                 </div>
                                 <input className={styles.passwd} type="password" placeholder="PASSWORD" />
-                                <div className={styles.contentArrowRight}>
+                                <Link href="/home" className={styles.contentArrowRight}>
                                     <FontAwesomeIcon className={styles.arrowRight} icon={faArrowRight} style={{ zIndex: '100', }} />
-                                </div>
+                                </Link>
+
                             </div>
                         </div>
 

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import styles from '../../styles/scss/Home/2AboutUS/about.module.css'
 
 
@@ -30,6 +29,7 @@ export default function About() {
             {/* Start Landing */}
             <div className={`${styles.About} bg-black h-[100vh] w-full`}>
                 <div className={styles.titel}>
+                    <h1>About<span> Developer universe</span></h1>
                     <h1>About<span> Developer universe</span></h1>
                 </div>
                 <div className={styles.contint_about}>
@@ -63,7 +63,7 @@ export default function About() {
                     <div className={styles.row1}>
                         <div className={styles.card}>
                             <div className={styles.questions}>
-                                <h1>Your questions, answered.</h1>
+                                <h1>Your questions, <span>answered.</span> </h1>
                             </div>
 
                             <div className={styles.questionsIcon}>
@@ -141,7 +141,7 @@ export default function About() {
                                     <h4>welcome to our discord server website.</h4>
                                     <h4>we are professional programmers and we specialize in the web development and mobile apps field.</h4>
                                     <div className={styles.likIcons}>
-                                        <FontAwesomeIcon className={`${styles.faArrowsTurnToDots} ${styles.Iconse}`} icon={faArrowsTurnToDots} style={{ zIndex: '100', }} />
+                                        <FontAwesomeIcon className={`${styles.faArrowsTurnToDots} ${styles.Iconse1}`} icon={faArrowsTurnToDots} style={{ zIndex: '100', }} />
                                     </div>
                                 </div>
 
