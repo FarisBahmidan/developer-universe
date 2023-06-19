@@ -296,7 +296,7 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
-                    text-fill-color: transparent;
+                    text-emphasis-color: transparent;
                     z-index: 1;
                     font-size: clamp(2vw, 5vw, 0.6em);
                     font-weight: bold;
@@ -359,7 +359,7 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
-                    text-fill-color: transparent;
+                    text-emphasis-color: transparent;
                     font-size: clamp(2vw, 5vw, 0.6em);
                     font-weight: bold;
                     @media (max-width: 720px) {
@@ -424,7 +424,7 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
-                    text-fill-color: transparent;
+                    text-emphasis-color: transparent;
                     @media (max-width: 720px) {
                         & {
                             font-size: clamp(8vw, 5vw, 1em);
@@ -514,7 +514,7 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
-                text-fill-color: transparent;
+                text-emphasis-color: transparent;
             }
 
             span {

@@ -6,7 +6,7 @@
     width: 100%;
     font-family: "Cabin", sans-serif;
     font-family: "Poppins", sans-serif;
-
+    z-index: 100;
     @media (max-width: 643px) {
         & {
             display: none;

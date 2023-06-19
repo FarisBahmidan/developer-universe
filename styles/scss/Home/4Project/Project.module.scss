@@ -1,3 +1,7 @@
+body.active-projects {
+    overflow-y: hidden;
+}
+
 .Project {
     height: fit-content;
     // padding: clamp(4vw, 20vw, 1em);
@@ -143,6 +147,264 @@
                 gap: clamp(1vw, 10vw, 0.4em);
                 .faArrowDown {
                     width: clamp(1vw, 10vw, 0.4em);
+                }
+            }
+        }
+    }
+}
+
+.projects,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.63);
+    overflow: hidden;
+
+    .project_content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-0%, -0%);
+        background-color: #000000;
+        box-shadow: 20px 20px 4px rgba(0, 0, 0, 0.25);
+        z-index: 1000;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            width: 90%;
+            height: 100%;
+            background: radial-gradient(50% 50% at 50% 50%, #5f67c2 0%, rgba(250, 86, 234, 0) 100%);
+            opacity: 0.4;
+        }
+
+        .container {
+            display: flex;
+            height: 80vh;
+            .lokProjects {
+                width: 70vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .col {
+                    .swip {
+                        user-select: none;
+                        padding: max(2em, 2vw) max(1vw, 1em);
+                        background: linear-gradient(298deg, #ffffff 7.83%, #5f67c2 103.25%);
+                        display: flex;
+                        flex-direction: row;
+                        gap: max(2em, 2vw);
+                        // cursor: grab;
+
+                        .projectUser {
+                            width: max(20em, 20vw);
+                            width: max(28em, 18vw);
+                            height: max(10em, 10vw);
+                            object-fit: cover;
+                            border-radius: max(0.3em, 0.3vw);
+                            cursor: pointer;
+                        }
+                    }
+                }
+    
+                .details {
+                    h1 {
+                        background: linear-gradient(89.81deg, #ffffff 0.14%, #5f67c2 0.15%, #1a1c31 39%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-emphasis-color: transparent;
+                        font-size: max(4em, 4vw);
+                        font-weight: bold;
+                        padding: 0 0 0 max(0.2vw, 0.2em);
+                    }
+                    p {
+                        padding: 0 0 0 max(0.4vw, 0.4em);
+                        font-size: max(2em, 2vw);
+                        width: 700px;
+                        line-height: 1.2;
+                    }
+
+                    .learning {
+                        background: #9d84f9;
+                        margin-top: max(1vw, 1em);
+                        ul {
+                            display: flex;
+                            gap: max(1em, 1vw);
+                            padding: max(0.3vw, 0.3em) max(1vw, 1em);
+                            li {
+                                font-size: max(1.8em, 1.8vw);
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+                .click {
+                    text-align: right;
+                    margin: max(1em, 1vw);
+                    .Download {
+                        padding: max(0.1em, 0.1vw) max(0.3em, 0.3vw);
+                        background: linear-gradient(105.41deg, #834de3 7.83%, #a878ff 93.81%);
+                        border-radius: max(0.1em, 0.1vw);
+                        font-size: max(2em, 2vw);
+                        transition: 0.3s;
+                        &:hover {
+                            color: #cddcf6;
+                        }
+                    }
+                }
+            }
+
+            .chat {
+                width: 30vw;
+                height: inherit;
+                background: linear-gradient(105.41deg, #ffffff 7.83%, #cddcf6 103.25%);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                .listInput {
+                    margin-right: max(4em, 4vw);
+                    .list {
+                        margin-bottom: clamp(1vw, 20vw, 1em);
+                        background: linear-gradient(-10deg, rgb(233 233 237) 7.83%, rgba(205, 220, 246, 0.77) 93.81%);
+                        display: flex;
+                        flex-direction: column;
+                        border-radius: 0 clamp(0.6vw, 20vw, 0.5em) clamp(0.6vw, 20vw, 0.5em) 0;
+                        padding: clamp(0.5vw, 20vw, 0.3em) clamp(2vw, 20vw, 1em);
+
+                        .contintlist {
+                            display: flex;
+                            flex-direction: row;
+                            gap: max(1em, 1vw);
+
+                            .list_item {
+                                background: #ffffff;
+                                border-radius: max(0.2em, 0.2vw);
+                                button {
+                                    padding: 0 max(0.8em, 0.8vw);
+                                    font-size: max(1.4em, 1.4vw);
+                                    font-weight: bold;
+                                    background: linear-gradient(270deg, #834de3 -0.01%, #ca56fa 88.98%);
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                    background-clip: text;
+                                    text-emphasis-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .send {
+                    padding: max(1em, 1vw);
+                    .cardsend {
+                        width: fit-content;
+                        padding: max(0.4em, 0.4vw) max(1em, 1vw);
+                        background: linear-gradient(
+                            97.8deg,
+                            rgba(127, 91, 255, 0.71) 0%,
+                            rgba(70, 36, 194, 0.71) 99.96%
+                        );
+                        border-radius: 12px;
+
+                        .title {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: start;
+                            gap: max(0.4em, 0.4vw);
+
+                            .sendUser {
+                            }
+                            .row {
+                                display: flex;
+                                width: -webkit-fill-available;
+                                flex-direction: row;
+                                align-items: flex-start;
+                                gap: max(1em, 1vw);
+                                justify-content: space-between;
+                                .name {
+                                    font-size: max(1.2em, 1.2vw);
+                                    font-weight: bold;
+                                }
+                                .deat {
+                                    color: #ffffff;
+                                    font-size: max(0.6em, 0.6vw);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inputmasge {
+                    margin-bottom: max(1em, 1vw);
+                    .content {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-end;
+
+                        .masge {
+                            position: relative;
+                            width: max(28em, 28vw);
+                            padding: max(0.8em, 0.8vw) max(1em, 1vw);
+                            border-radius: max(3em, 3vw);
+                            border: none;
+                            color: #000000;
+                            background: #ffffff;
+                            box-shadow: 0px 10px 20px rgba(179, 197, 234, 0.48), inset -4px -4px 8px #dfe6f5,
+                                inset 3px 3px 10px rgba(255, 255, 255, 0.72);
+                            transition: 0.3s;
+
+                            &::placeholder {
+                                position: absolute;
+                                font-size: max(1vw, 1em);
+                                font-weight: 500;
+                                user-select: none;
+                                color: rgba(133, 128, 228, 0.685);
+                                transition: 0.3s;
+                            }
+
+                            &:focus {
+                                border-radius: max(0.4em, 0.4vw);
+                                outline: 0;
+                            }
+
+                            &:focus::placeholder {
+                                padding-right: max(3em, 3vw);
+                                color: transparent;
+                            }
+                        }
+
+                        .contentArrowRight {
+                            position: relative;
+                            padding: max(0.3vw, 0.3em);
+                            width: fit-content;
+                            border-radius: max(100vw, 100em);
+                            margin-left: max(1vw, 1em);
+
+                            .masgeIcon {
+                                padding: max(0.2vw, 0.2em);
+                                border-radius: 100px;
+                                transition: 0.3s ease;
+                                color: #be9ce8;
+                                font-size: max(1.8em, 1.8vw);
+                                position: absolute;
+                                right: 100%;
+                                top: 50%;
+                                transform: translate(-60%, -50%);
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
             }
         }

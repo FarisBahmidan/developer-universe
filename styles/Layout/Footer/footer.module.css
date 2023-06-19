@@ -311,7 +311,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-emphasis-color: transparent;
+          text-emphasis-color: transparent;
   z-index: 1;
   font-size: clamp(2vw, 5vw, 0.6em);
   font-weight: bold;
@@ -367,7 +368,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-emphasis-color: transparent;
+          text-emphasis-color: transparent;
   font-size: clamp(2vw, 5vw, 0.6em);
   font-weight: bold;
 }
@@ -425,7 +427,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-emphasis-color: transparent;
+          text-emphasis-color: transparent;
 }
 @media (max-width: 720px) {
   .Footer .containerF .footContinuer .Social h1 {
@@ -507,7 +510,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-emphasis-color: transparent;
+          text-emphasis-color: transparent;
 }
 .Footer .containerF .CopyRight span {
   font-size: clamp(1.4vw, 5vw, 0.7em);

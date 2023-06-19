@@ -22,7 +22,6 @@ export default function Index() {
         <link rel="icon" href="/myAmges.svg" />
       </Head>
 
-<h1>dgergjeigj</h1>
 
       <Welcome />
 
