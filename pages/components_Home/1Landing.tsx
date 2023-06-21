@@ -9,11 +9,69 @@ import laigt from '../../public/laigt.svg'
 import Liner from '../../public/Liner.svg'
 import bg from '../../public/bg.svg'
 import Logo from '../../public/LogoSearvar.svg'
+import { useEffect, useState } from 'react'
+import { useSleep } from '@/hocks/useAnimation'
 // imgs
 
+class Writer {
+    private wordConvirtor = ""
+    public isDone = false;
+    constructor(public word:string) {
+
+    }
+    public async writeWord(){
+        for(let i = 0; i < this.word.length; i++){
+            await useSleep(500)
+            this.wordConvirtor += this.word[i]
+        }
+        return this.wordConvirtor
+    }
+    public async removeWord(){
+        for(let i = 0; i < this.word.length; i++){
+            await useSleep(500)
+            this.wordConvirtor = this.word.slice(0, -1);
+        }
+        if(this.wordConvirtor == ""){
+            this.isDone = true
+        }
+        return this.wordConvirtor
+    }
+}
 
 export default function Landing() {
-
+    const listWords = [
+        "lala",
+        "lolo",
+        "lele"
+    ]
+    const [words, setWords]  = useState("")
+    var i = 0;
+    var j = 0;
+    var isDelete = false
+    var wordConvirtor = ""
+    useEffect(() => {
+        setInterval(() => {
+            if(i == listWords.length){
+                i = 0;
+            }
+            if(wordConvirtor  == listWords[i]){
+                isDelete = true
+            }
+            if(isDelete){
+                wordConvirtor = wordConvirtor.slice(0, -1);
+            } else {
+                wordConvirtor += listWords[i][j]
+            }
+            j++
+            if(wordConvirtor == ""){
+                i++
+                j = 0
+                isDelete = false
+            }
+            setWords(wordConvirtor)
+            
+        }, 100)
+    }, [])
     return (
         <>
             {/* Start Landing */}
@@ -29,7 +87,7 @@ export default function Landing() {
                             <div className={styles.totel}>
                                 <span className={`${styles.text} ${styles.first_text}`}>the <span className={styles.colo}>developer universe</span> is a simple  discord server </span>
                                 <div className='flex gap-3'>
-                                    <span className={`${styles.text} ${styles.spatiol} flex`}>specialized in</span> <span className={`${styles.text} ${styles.sec_text} text-white`}>  front end</span>
+                                    <span className={`${styles.text} ${styles.spatiol} flex`}>specialized in</span> <span className={`${styles.text} text-white`}>{words}</span>
                                 </div>
                                 <h1 className={styles.ditels}>and we will be  more then happy to help you in these majors</h1>
                             </div>

@@ -12,3 +12,7 @@ export async function useYofiAnimation(styleName: { display: string; }, set: { (
         set(lastAnimation)
     }
 }
+
+export const useSleep = async(dlay:number) => {
+    await new Promise(r => setTimeout(r, dlay))
+}

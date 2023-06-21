@@ -19,7 +19,7 @@ import {
     faThumbsDown,
     faReply,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from 'react'
+import { useState, MouseEvent, KeyboardEvent } from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
@@ -34,50 +34,95 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
-const projectAll = [
-    {
-        projectImg: '/public/Member3D.svg',
-        nameeuser: 'hunter',
-        titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
-        by: 'hunter',
-    },
-    {
-        projectImg: '/public/Member3D.svg',
-        nameeuser: 'hunter',
-        titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
-        by: 'hunter',
-    },
-    {
-        projectImg: '/public/Member3D.svg',
-        nameeuser: 'hunter',
-        titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
-        by: 'hunter',
-    },
-    {
-        projectImg: '/public/Member3D.svg',
-        nameeuser: 'hunter',
-        titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
-        by: 'hunter',
-    },
-    {
-        projectImg: '/public/Member3D.svg',
-        nameeuser: 'hunter',
-        titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
-        by: 'hunter',
-    },
-]
+
+
+interface Comment {
+    msg:string
+}
+
+interface Project {
+    projectImg:string
+    nameeuser:string
+    titelUser:string
+    by:string
+}
 
 
 export default function Project() {
 
     SwiperCore.use([Autoplay])
-
+    const [projectAll, setProjectAll] = useState<Project[]>([
+        {
+            projectImg: '/public/Member3D.svg',
+            nameeuser: 'hunter',
+            titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
+            by: 'hunter',
+        },
+        {
+            projectImg: '/public/Member3D.svg',
+            nameeuser: 'hunter',
+            titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
+            by: 'hunter',
+        },
+        {
+            projectImg: '/public/Member3D.svg',
+            nameeuser: 'hunter',
+            titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
+            by: 'hunter',
+        },
+        {
+            projectImg: '/public/Member3D.svg',
+            nameeuser: 'hunter',
+            titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
+            by: 'hunter',
+        },
+        {
+            projectImg: '/public/Member3D.svg',
+            nameeuser: 'hunter',
+            titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
+            by: 'hunter',
+        },
+        {
+            projectImg: '/public/Member3D.svg',
+            nameeuser: 'hunter',
+            titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
+            by: 'hunter',
+        },
+    ])
+    const [msgslist, setMsgsList] = useState<Comment[]>([
+        {
+            msg:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        }
+    ])
     const [projects, setpoPapproject] = useState(false);
-    const toggleproject = () => {
+    const toggleproject = (e:MouseEvent<HTMLDivElement>) => {
+        console.log((e.target as HTMLElement).tagName)
+        if((e.target as HTMLElement).tagName == "BUTTON"){
+            return;
+        }
         setpoPapproject(!projects);
-
     };
-
+    const addMsg = (value:Comment) => {
+        setMsgsList([...msgslist, value])
+    }
+    const addProject = () => {
+        setProjectAll([...projectAll,
+            {
+                projectImg: '/public/Member3D.svg',
+                nameeuser: 'hunter',
+                titelUser: 'Scipt text ans Devloper Portal Discord Figma UX UI',
+                by: 'hunter',
+            }
+        ,])
+    }
+    const enterInput = (e:KeyboardEvent<HTMLInputElement>) => {
+        if(e.key == "Enter"){
+            addMsg({
+                msg:(e.target as HTMLInputElement).value
+            });
+            (e.target as HTMLInputElement).value = ""
+        }
+    }
 
     return (
         <>
@@ -128,23 +173,12 @@ export default function Project() {
                                     </div>
                                 </div>
                                 <div className={styles.chat}>
-
-                                    <div className={styles.send}>
-                                        <div className={styles.cardsend}>
-                                            <div className={styles.title}>
-                                                <Image className={styles.sendUser} src={sendUser} alt="user" />
-                                                <div className={styles.row}>
-                                                    <h1 className={styles.name}>Hunter</h1>
-                                                    <h1 className={styles.deat}>05/28/2023 12:09 PM</h1>
-                                                </div>
-                                            </div>
-                                            <p className={styles.sendMasseg}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, facere. Lorem ipsum dolor sit amet.</p>
-                                        </div>
-                                    </div>
-
+                                    {msgslist.map((value, i) => {
+                                        return <UserMsg msg={value.msg} key={i}/>
+                                    })}
                                     <div className={styles.inputmasge}>
                                         <div className={styles.content}>
-                                            <input className={styles.masge} type="text" placeholder="masge" />
+                                            <input onKeyDown={enterInput} className={styles.masge} type="text" placeholder="masge" />
                                             <div className={styles.contentArrowRight}>
                                                 <FontAwesomeIcon className={styles.masgeIcon} icon={faReply} style={{ zIndex: '100', }} />
                                             </div>
@@ -172,10 +206,10 @@ export default function Project() {
                                         <div className={styles.contint}>
                                             <div className={styles.likeDisLik}>
                                                 <div className={styles.lik}>
-                                                    <button> <FontAwesomeIcon className={styles.faThumbsUp} icon={faThumbsUp} /> 10k</button>
+                                                    <button> <FontAwesomeIcon className={styles.faThumbsUp} icon={faThumbsUp} /> 0</button>
                                                 </div>
                                                 <div className={styles.dis}>
-                                                    <button> <FontAwesomeIcon className={styles.faThumbsUp} icon={faThumbsDown} /> 4k</button>
+                                                    <button> <FontAwesomeIcon className={styles.faThumbsUp} icon={faThumbsDown} /> 0</button>
                                                 </div>
                                             </div>
                                             <div className={styles.by}>
@@ -191,11 +225,26 @@ export default function Project() {
 
                     </div>
                     <div className={styles.more}>
-                        <button>and more <FontAwesomeIcon className={styles.faArrowDown} icon={faArrowDown} /></button>
+                        <button onClick={addProject}>and more <FontAwesomeIcon className={styles.faArrowDown} icon={faArrowDown} /></button>
                     </div>
                 </div>
             </div >
             {/* End Landing */}
         </>
     )
+}
+
+function UserMsg({msg}:{msg:string}){
+    return <div className={styles.send}>
+        <div className={styles.cardsend}>
+            <div className={styles.title}>
+                <Image className={styles.sendUser} src={sendUser} alt="user" />
+                <div className={styles.row}>
+                    <h1 className={styles.name}>Hunter</h1>
+                    <h1 className={styles.deat}>05/28/2023 12:09 PM</h1>
+                </div>
+            </div>
+            <p className={styles.sendMasseg}>{msg}</p>
+        </div>
+    </div>
 }

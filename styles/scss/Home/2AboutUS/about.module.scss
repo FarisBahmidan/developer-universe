@@ -196,7 +196,9 @@
                     background-color: #191919;
                     border-radius: clamp(1vw, 10vw, 0.2em);
                     padding: 0 clamp(1vw, 10vw, 0.2em);
-
+                    padding-bottom: max(2vw, 2rem);
+                    overflow-y: scroll;
+                    height: max(13vw, 13rem);
                     .questionsBox {
                         border-bottom: 2px solid #e6e6e677;
 
@@ -220,6 +222,11 @@
                                 text-emphasis-color: transparent;
                                 font-size: clamp(2vw, 5vw, 0.3em);
                             }
+                        }
+                        .ans{
+                            background: #2d2d2d;
+                            overflow: hidden;
+                            transition: 0.3s;
                         }
                     }
                 }
@@ -382,6 +389,7 @@
             // height: fit-content;
             //
             .cardQA {
+                user-select: none;
                 background-color: #000000;
                 // padding: clamp(1vw, 5vw, 0.2em);
                 // border-radius: clamp(1vw, 5vw, 0.2em);
@@ -409,10 +417,12 @@
                     background-color: #191919;
                     border-radius: clamp(1vw, 10vw, 0.2em);
                     padding: 0 clamp(1vw, 10vw, 0.3em);
-
+                    padding-bottom: max(2vw, 2rem);
+                    overflow-y: scroll;
+                    height: max(13vw, 13rem);
                     .questionsBoxQA {
                         border-bottom: 2px solid #e6e6e677;
-
+                        
                         &:last-child {
                             border: none;
                         }
@@ -431,6 +441,11 @@
                             .chevron {
                                 width: 3%;
                             }
+                        }
+                        .ans{
+                            background: #2d2d2d;
+                            overflow: hidden;
+                            transition: 0.3s;
                         }
                     }
                 }

@@ -182,6 +182,9 @@
   background-color: #191919;
   border-radius: clamp(1vw, 10vw, 0.2em);
   padding: 0 clamp(1vw, 10vw, 0.2em);
+  padding-bottom: max(2vw, 2rem);
+  overflow-y: scroll;
+  height: max(13vw, 13rem);
 }
 .About .container .row1 .card .boxback .questionsBox {
   border-bottom: 2px solid rgba(230, 230, 230, 0.4666666667);
@@ -207,6 +210,11 @@
   -webkit-text-emphasis-color: transparent;
           text-emphasis-color: transparent;
   font-size: clamp(2vw, 5vw, 0.3em);
+}
+.About .container .row1 .card .boxback .questionsBox .ans {
+  background: #2d2d2d;
+  overflow: hidden;
+  transition: 0.3s;
 }
 .About .container .row1 .name {
   position: relative;
@@ -336,6 +344,9 @@
   font-size: max(1.5em, 1.5vw);
 }
 .About .container .row3 .cardQA {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   background-color: #000000;
   border-radius: max(1em, 1vw);
   padding: max(1em, 1vw);
@@ -358,6 +369,9 @@
   background-color: #191919;
   border-radius: clamp(1vw, 10vw, 0.2em);
   padding: 0 clamp(1vw, 10vw, 0.3em);
+  padding-bottom: max(2vw, 2rem);
+  overflow-y: scroll;
+  height: max(13vw, 13rem);
 }
 .About .container .row3 .cardQA .boxbackQA .questionsBoxQA {
   border-bottom: 2px solid rgba(230, 230, 230, 0.4666666667);
@@ -378,6 +392,11 @@
 }
 .About .container .row3 .cardQA .boxbackQA .questionsBoxQA .answered .chevron {
   width: 3%;
+}
+.About .container .row3 .cardQA .boxbackQA .questionsBoxQA .ans {
+  background: #2d2d2d;
+  overflow: hidden;
+  transition: 0.3s;
 }
 .About .container .row3 .ticket {
   background-color: #000000;
