@@ -188,6 +188,8 @@
 
                     .Iconse {
                         font-size: max(2em, 2vw);
+                        width: max(1vw, 1em);
+                        height: max(1vw, 1em);
                         margin: clamp(1vw, 10vw, 0.5em) 0;
                     }
                 }
@@ -274,6 +276,8 @@
                         text-align: -moz-right;
                         text-align: end;
                         font-size: max(2em, 2vw);
+                        width: max(1vw, 1em);
+                        height: max(1vw, 1em);
                     }
                 }
             }
@@ -410,6 +414,8 @@
                     margin: clamp(1vw, 10vw, 0.5em) 0;
                     .Iconse {
                         font-size: max(2em, 2vw);
+                        width: max(1vw, 1em);
+                        height: max(1vw, 1em);
                     }
                 }
 

@@ -364,6 +364,8 @@
 }
 .About .container .row3 .cardQA .questionsIcon .Iconse {
   font-size: max(2em, 2vw);
+  width: max(1vw, 1em);
+  height: max(1vw, 1em);
 }
 .About .container .row3 .cardQA .boxbackQA {
   background-color: #191919;

@@ -94,6 +94,7 @@
 
                     .contentEyeSlash {
                         position: relative;
+                    
                         // left: -4%;
                         padding: max(0.1vw, 0.1em);
                         // width: fit-content;
@@ -102,6 +103,7 @@
                         cursor: cell;
                         
                         .eyeSlash {
+                          
                             position: absolute;
                             background-color: rgb(67, 86, 196);
                             border: 5px solid rgba(204, 204, 204, 0.5);
@@ -109,10 +111,9 @@
                             padding: max(0.2vw, 0.2em);
                             font-size: max(1.5em, 1.5vw);
                             border-radius: max(50em, 50vw);
-                            height: max(1em,1vw);
-                            width: max(1em,1vw);
+                            width: max(1vw, 1em);
                             top: 50%;
-                            transform: translate(-20%,-50%);
+                            transform: translate(-30%,-50%);
                             z-index: 100;
                         }
                     }

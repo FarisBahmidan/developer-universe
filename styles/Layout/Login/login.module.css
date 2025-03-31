@@ -99,10 +99,9 @@
   padding: max(0.2vw, 0.2em);
   font-size: max(1.5em, 1.5vw);
   border-radius: max(50em, 50vw);
-  height: max(1em, 1vw);
-  width: max(1em, 1vw);
+  width: max(1vw, 1em);
   top: 50%;
-  transform: translate(-20%, -50%);
+  transform: translate(-30%, -50%);
   z-index: 100;
 }
 .login .concurLog .container .inputconect .content .passwd {
